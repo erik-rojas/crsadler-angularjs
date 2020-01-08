@@ -1,0 +1,33 @@
+<section id="page-title" class="page-title-center">
+    <div class="container clearfix">
+        <h1>C.R. Sadler - {{ currentCategory.name }}</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" ui-sref="home">Home</a></li>
+            <li class="breadcrumb-item"><a href="/shop" ui-sref="shop">Shop</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ currentCategory.name }}</li>
+        </ol>
+    </div>
+</section>
+    
+<section id="content">
+    <div class="content-wrap" style="padding: 0px !important; background: #000;">
+        <div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry portfolio-full clearfix">
+            <article class="portfolio-item pf-illustrations" ng-repeat="product in products">
+                <div class="portfolio-image">
+                    <a href="/shop/{{ currentCategory.slug }}/{{ product.id }}">
+                        <img data-lazyload="{{ product.images[0] }}" alt="">
+                    </a>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-desc">
+                            <h3><a href="portfolio-single.html">{{ product.name }} - {{ product.metadata.price }}</a></h3>
+                            <span><a href="#">Original</a> by <a href="#">{{ product.metadata.author }}</a></span>
+                        </div>
+                        <a href="{{ product.images[0] }}" class="item-quick-view" data-lightbox="image"><i class="icon-zoom-in2"></i></a>
+                        <a href="/shop/{{ currentCategory.slug }}/{{ product.id }}" ui-sref="single({ category: '{{currentCategory.slug}}', cat_id: {{currentCategory.id}}, product: '{{product.id}}', pro_id: {{product.num}} })" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                        <!-- <a href="/shop/{{ currentCategory.slug }}/{{ product.id }}" ui-sref="single" class="right-icon"><i class="icon-line-ellipsis"></i></a> -->
+                    </div>
+                </div>
+            </article>
+        </div>  
+    </div>
+</section>

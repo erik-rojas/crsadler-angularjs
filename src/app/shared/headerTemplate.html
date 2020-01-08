@@ -1,0 +1,123 @@
+<div class="body-overlay"></div>
+<div id="side-panel" class="dark">
+  <div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+  <div class="side-panel-wrap">
+    <div class="widget clearfix center">
+      <h4 >Contact Details</h4>
+      <hr style="border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 40px;"/>
+      <nav class="nav-tree nobottommargin">
+        <ul>
+          <a href="tel:928.985.0575" class="button button-medium nomargin center" style="width: 100%; margin-bottom: 15px !important;">Call Phone</a>							
+          <a href="mailto:sedonawebservices@gmail.com" class=" button button-medium nomargin center" style="width: 100%;">Send E-mail</a>					
+        </ul>
+      </nav>
+    </div>
+    <div class="widget quick-contact-widget center clearfix" style="border-top: 0px; margin-top: 0px;">
+      <hr style="border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; margin-top: 0px;"/>
+      <h4>Contact Form</h4>
+      <hr style="border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px;"/>
+      <div class="quick-contact-form-result"></div>
+      <form id="quick-contact-form" name="quick-contact-form" action="/api/send-message" method="post" class="quick-contact-form nobottommargin">
+        <div class="form-process"></div>
+        <input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="name" value="" placeholder="Full Name" />
+        <input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="email" value="" placeholder="Email Address" />
+        <textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="message" rows="4" cols="30" placeholder="Message"></textarea>
+        <input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+        <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-medium nomargin" value="submit" style="width: 100%; margin-top: 20px !important;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Top Bar
+============================================= -->
+<div id="top-bar" class="dark" [ngClass]="transparent-topbar">
+  <div class="container clearfix">
+    <div class="col_half nobottommargin clearfix">
+      <!-- Top Links -->
+      <div class="top-links">
+        <ul>
+          <li><a ui-sref="home">Home</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#" class="side-panel-trigger">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col_half fright col_last clearfix nobottommargin">
+      <!-- Top Social -->
+      <div id="top-social">
+        <ul>
+          <li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+          <li><a href="#" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+          <li><a href="#" class="si-pinterest"><span class="ts-icon"><i class="icon-pinterest"></i></span><span class="ts-text">Pinterest</span></a></li>
+          <li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+          <li><a href="tel:928.985.0575" class="si-call"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">928.985.0575</span></a></li>
+          <li><a href="mailto:admin@crsadler.com" class="si-email3"><span class="ts-icon"><i class="icon-envelope-alt"></i></span><span class="ts-text">admin@crsadler.com</span></a></li>
+        </ul>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header" class="static-sticky dark" ng-class="{{}}transparent-header" data-sticky-class="dark" data-responsive-class="dark">
+  <div id="header-wrap">
+    <div class="container clearfix">
+      <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+      <!-- Logo -->
+      <div id="logo">
+        <a href="/" class="standard-logo">C.R. Sadler</a>
+      </div>
+      <!-- Primary Navigation -->
+      <nav id="primary-menu" class="style-1">
+        <ul>
+          <li class="{% if aboutPage %}current{% endif %}"><a href="/about-cr-sadler"><div>About CR Sadler</div></a></li>
+          <li class="submenu {% if informationPage %}current{% endif %}">
+            <a href="#" ui-sref="shop">Categories</a>
+            <ul>
+              <li class=""><a ui-sref="category({category: 'oils', id: 0})"><div>Oils</div></a></li>
+              <li class=""><a ui-sref="category({category: 'pastels', id: 1})"><div>Pastels</div></a></li>
+            </ul>
+          </li>							
+          <li class="{% if shopPage %}current{% endif %}"><a ui-sref="shop"><div>All Artwork</div></a></li>
+
+          <div id="top-cart">
+            <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
+            <div class="top-cart-content">
+            <div class="top-cart-title">
+            <h4>Shopping Cart</h4>
+            </div>
+            <div class="top-cart-items">
+            <div class="top-cart-item clearfix">
+            <div class="top-cart-item-image">
+            <a href="#"><img src="#" alt="Blue Round-Neck Tshirt"></a>
+            </div>
+            <div class="top-cart-item-desc">
+            <a href="#">Blue Round-Neck Tshirt</a>
+            <span class="top-cart-item-price">$19.99</span>
+            <span class="top-cart-item-quantity">x 2</span>
+            </div>
+            </div>
+            <div class="top-cart-item clearfix">
+            <div class="top-cart-item-image">
+            <a href="#"><img src="#" alt="Light Blue Denim Dress"></a>
+            </div>
+            <div class="top-cart-item-desc">
+            <a href="#">Light Blue Denim Dress</a>
+            <span class="top-cart-item-price">$24.99</span>
+            <span class="top-cart-item-quantity">x 3</span>
+            </div>
+            </div>
+            </div>
+            <div class="top-cart-action clearfix">
+            <span class="fleft top-checkout-price">$114.95</span>
+            <button class="button button-3d button-small nomargin fright">View Cart</button>
+            </div>
+            </div>
+            </div>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

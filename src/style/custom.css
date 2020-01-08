@@ -1,0 +1,194 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+.toast {
+  opacity: .9 !important;
+}
+
+.toast:hover {
+  opacity: 1 !important;
+}
+
+.show {
+  display: block;
+  opacity: 1 !important;
+}
+
+.card {
+  border-radius: 0px;
+}
+
+.card-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+img {
+  border:solid 1px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  max-height:100%;
+  max-width:100%;
+  width: 100%;
+}
+
+
+
+.frame {
+  background-color:#ddd;
+  border:solid 3vmin #000;
+  border-bottom-color:#333;
+  border-left-color:#000;
+  border-right-color:#000;
+  border-top-color:#555;
+  border-radius:2px;  
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  height:auto;
+  width: 100%;
+  padding:3vmin;
+  position:relative;
+  text-align:center;
+  &:before {
+    border-radius:2px;
+    bottom:-2vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-2vmin;
+    position:absolute;
+    right:-2vmin;
+    top:-2vmin;
+  }
+  &:after {
+    border-radius:2px;
+    bottom:-2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-2.5vmin;
+    position:absolute;
+    right:-2.5vmin;
+    top:-2.5vmin;
+  }
+}
+
+.bg-image {
+	background: url('/images/introduction-bg.jpg') repeat; 
+	background-size: 300px;
+}
+
+.form-padding {
+	padding: 2.5rem;
+	margin-bottom: 2.5rem;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 0px !important;
+}
+
+@media screen and (max-width: 772px) {
+	.form-padding {
+		padding: 0rem;
+		margin-bottom: 0rem;
+		background: #fff;
+		border: none;
+
+	}
+	.bg-image {
+		background: none;
+	}
+
+}
+
+.dark #slider a#learn-more:hover {
+  background-color: red !important;
+}
+
+
+
+table.cart th, table.cart td {
+	text-align: center;
+}
+
+table.cart img {
+	display: inline-block !important;
+}
+
+#slider {
+	position: relative;
+}
+
+#primary-menu ul li>a {
+	text-transform: none !important;
+}
+
+#page-title {
+	padding: 60px 0px;
+/*	background: url('/images/title-bg.jpg') repeat !important;
+	background-size: 300px 300px !important;
+*/	
+	background-image: linear-gradient(to bottom, #555, #333) !important;
+	color: #fff !important;
+	border-bottom: none !important;
+
+}
+
+#page-title h1 {
+	font-family: "Pacifico";
+	text-transform: none !important;
+	font-size: 32pt;
+}
+#page-title h1, #page-title span, #page-title a, #page-title li {
+	color: #fff !important;
+}
+
+.product-overlay a {
+	border: 1px solid #ccc;
+}
+
+.product-overlay a.add-to-cart {
+	border-right: 0 !important;
+}
+
+
+.product-overlay a.item-quick-view {
+	border-right: 1px solid #ccc !important;
+}
+
+.hover-color:hover {
+	background: blue;
+}
+header, header.sticky-header {
+	border-bottom: 1px solid rgba(255,255,255,.2) !important;
+}
+
+
+header #logo a {line-height: 100px !important; color: #fff !important;}
+/*		header.sticky-header #logo h3 {line-height: 60px !important; color: #fff !important}		
+*/
+header #logo a {transition: line-height .5s}
+/*		header.sticky-header #logo a {transition: line-height .5s;}	
+*/
+#logo a {display: block !important; font-size: 15pt; line-height: 60px;}
+
+#primary-menu a:hover {
+	opacity: .75;
+}
+
+#slide-heading {
+
+}
+#posts .entry-content {
+    margin-top: 20px;
+}
+#slider h2, #slider h3, #slider span { text-shadow: 2px 2px 0px #000; letter-spacing: 1px; }
+
+
+.postcontent * {
+	text-align: justify;
+	font-size: 14pt;
+}

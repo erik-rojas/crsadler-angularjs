@@ -1,0 +1,38 @@
+<section id="page-title" class="page-title-center">
+    <div class="container clearfix">
+        <h1>All Artwork</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+        </ol>
+    </div>
+</section>
+    
+<section id="content">
+    <div class="content-wrap" style="padding: 0px !important; background: #000;">
+    
+    <div id="portfolio" class="portfolio grid-container portfolio-5 portfolio-masonry clearfix">
+    
+    {% for product in products %}
+    
+    <article class="portfolio-item pf-illustrations">
+        <div class="portfolio-image">
+            <a href="portfolio-single.html">
+                <img data-lazyload="{{ product.images[0] }}" alt="">
+            </a>
+            <div class="portfolio-overlay">
+                <div class="portfolio-desc">
+                    <h3><a href="portfolio-single.html">{{ product.name }} - {{ product.metadata.price }}</a></h3>
+                    <span><a href="#">Original</a> by <a href="#">{{ product.metadata.author }}</a></span>
+                </div>
+                <a href="{{ product.images[0] }}" class="item-quick-view" data-lightbox="image"><i class="icon-zoom-in2"></i></a>
+                <a href="#" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+            </div>
+        </div>
+    </article>
+    
+    {% endfor %}
+    
+    </div>
+    </div>
+</section>
